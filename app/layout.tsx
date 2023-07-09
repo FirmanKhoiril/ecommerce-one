@@ -2,7 +2,7 @@ import { Footer, Navbar } from "@/components";
 import "./globals.css";
 import { Roboto } from "next/font/google";
 
-const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700", "900"], adjustFontFallback: true });
+const roboto = Roboto({ subsets: ["latin"], weight: ["400", "300", "500", "700", "900"], adjustFontFallback: true });
 
 export const metadata = {
   title: "Nabila Beauty",
