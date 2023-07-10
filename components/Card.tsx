@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Bg from "../public/intensive-cream.webp";
+
 const Card = () => {
   const hadiahGratis = true;
   return (
     <div className="w-[200px] bg-white hover:border-purple-500 hover:translate-y-[-4px] border  rounded-sm group shadow-md shadow-black/10 relative h-80 flex items-start flex-col gap-2">
-      <Image src={Bg} loading="lazy" alt="Background Product" width={200} height={160} className="w-full h-[160px]" />
-      <div className="absolute top-0 right-0 h-10 before:w-4 before:h-2 before:bg-red-500 w-10 text-sm text-center bg-yellow-500">
-        <p className="text-red-500">40%</p>
+      <Image src={Bg} loading="lazy" placeholder="blur" alt="Background Product" width={200} height={160} className="w-full h-[160px]" />
+      <div className="absolute top-0 right-0 h-10 before:w-4 before:h-2 before:bg-red-500 w-10 text-sm text-center bg-yellow-400 shadow-md rounded-bl-md">
+        <p className="text-red-600">40%</p>
         <p className="text-white">OFF</p>
       </div>
       <div className="px-2 py-1">

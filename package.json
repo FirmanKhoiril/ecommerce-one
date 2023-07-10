@@ -25,5 +25,18 @@
   },
   "devDependencies": {
     "tailwind-scrollbar": "^3.0.4"
-  }
+  },
+  "description": "Nabila Beauty Menjual Barang2 Menarik dan Tentunya Berdiskon Besar-Besaran.",
+  "main": "next.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FirmanKhoiril/ecommerce-one.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FirmanKhoiril/ecommerce-one/issues"
+  },
+  "homepage": "https://github.com/FirmanKhoiril/ecommerce-one#readme"
 }
