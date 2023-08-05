@@ -4,15 +4,12 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        primary: "#3b82f6",
-        secondary: "#C439ED",
+        primary: "#7c3aed",
+        secondary: "#ab47ed",
         card: "#fafafa",
       },
       fontWeight: {
         extrabold: "900",
-      },
-      textColor: {
-        primary: "#3b82f6",
       },
       fontSize: {
         xs: "12px",

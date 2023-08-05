@@ -9,13 +9,10 @@ const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700", "900"]
 const SearchBar = () => {
   const handleSubmit = () => {};
   return (
-    <form onSubmit={handleSubmit} className={`${roboto.className} flex items-center relative`}>
-      <input type="text" placeholder="Ketik kata kunci pencarian" className="px-4 shadow-md placeholder:text-black/40 py-2 peer outline-none min-w-[200px] bg-slate-50 focus:bg-violet-50 transition duration-300 rounded-l-lg" />
-      <button className=" p-[9px] peer-focus:bg-violet-500 hover:bg-violet-500 shadow-md text-white transition duration-300 rounded-r-lg  bg-violet-400" aria-label="buttonSearch" type="submit">
+    <form onSubmit={handleSubmit} className={`${roboto.className} flex flex-grow items-center justify-center relative`}>
+      <input type="text" placeholder="Cari Product" className="px-4 shadow-md bg-blue-50 placeholder:text-black/50 py-2 peer outline-none  grow min-w-[300px] max-w-[500px] transition duration-300 rounded-l-lg" />
+      <button className=" p-[9px] hover:bg-primary/80 shadow-lg text-white transition duration-[0.4s] rounded-r-lg bg-primary" aria-label="buttonSearch" type="submit">
         <AiOutlineSearch size={24} />
-      </button>
-      <button className="p-2 ml-4 rounded-r-lg  hover:text-violet-500" aria-label="buttonSearch" type="button">
-        <SlBasket size={24} />
       </button>
     </form>
   );
