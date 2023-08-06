@@ -31,7 +31,7 @@ const Navbar = () => {
   };
   return (
     <nav className={`bg-white ${lobster.className} p-3 shadow-md w-full sticky top-0 z-30 flex justify-between lg:justify-around items-center`}>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center md:gap-2 gap-1">
         {activeSidebar ? (
           <button type="button" onClick={handleSidebar} name="buttonMenu" aria-label="buttonMenu" className="p-2 rounded-full hover:opacity-80">
             <AiOutlineClose size={20} />
@@ -45,7 +45,7 @@ const Navbar = () => {
           <h1 className="text-2xl md:text-3xl flex text-primary font-bold">Nabila Beauty</h1>
         </Link>
       </div>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-1 md:gap-2">
         <div className="hidden lg:flex">
           <SearchBar />
         </div>

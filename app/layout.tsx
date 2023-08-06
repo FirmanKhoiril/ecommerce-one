@@ -8,7 +8,7 @@ import { QueryProvider } from "@/hooks/queryProvider";
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "300", "500", "700", "900"], adjustFontFallback: true });
 
 export const metadata = {
-  title: "Nabila Beauty",
+  title: "Nabila Beauty | Situs Perbelanjaan",
   description: "Marketplace Nabila Menjual Skincare dan produk-produk Menarik Lainya",
 };
 

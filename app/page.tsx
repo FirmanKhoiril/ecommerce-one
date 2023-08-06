@@ -3,8 +3,6 @@
 import { Card, Hero } from "@/components";
 import Categories from "@/components/Categories";
 import { useGetProduct } from "@/hooks/useGetProduct";
-import { useGlobalState } from "@/hooks/useGlobalState";
-
 import { ColorRing } from "react-loader-spinner";
 
 type TCardProduct = {
@@ -23,16 +21,14 @@ type TCardProduct = {
 };
 
 export default function Home() {
-  const { category } = useGlobalState();
-
-  const { data, isLoading, isFetching, isSuccess } = useGetProduct(category);
+  const { data, isLoading, isFetching, isSuccess } = useGetProduct();
 
   return (
     <main className="flex flex-col w-full container py-4 px-2 md:px-14">
       <Hero />
 
       <Categories />
-      <div className="flex overflow-x-auto scrollbar-none gap-2 py-10">
+      <div className="flex overflow-x-auto scrollbar-none gap-2 py-4">
         {isLoading && isFetching ? (
           <div className="w-full flex items-center justify-center">
             <ColorRing visible={true} height="80" width="80" ariaLabel="blocks-loading" wrapperClass="blocks-wrapper" colors={["#4E30FA", "#2A40DE", "#3B82F6", "#2A9EDE", "#30E8FA"]} />
