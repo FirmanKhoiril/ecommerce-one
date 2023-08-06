@@ -1,5 +1,9 @@
 export { default as Footer } from "./Footer";
 export { default as Navbar } from "./Navbar";
+export { default as Sidebar } from "./Sidebar";
 export { default as Card } from "./Card";
 export { default as Hero } from "./Hero";
 export { default as SearchBar } from "./SearchBar";
+export { default as BottomBar } from "./BottomBar";
+export { default as Basket } from "./Basket";
+export { default as SearchMobile } from "./SearchMobile";

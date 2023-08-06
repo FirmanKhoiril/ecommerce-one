@@ -1,4 +1,4 @@
-import { Footer, Navbar } from "@/components";
+import { Basket, BottomBar, Footer, Navbar, SearchMobile, Sidebar } from "@/components";
 import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
 import { Roboto } from "next/font/google";
@@ -15,12 +15,16 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={`${roboto.className} flex flex-col items-center`}>
         <ContextProvider>
           <Navbar />
+          <Sidebar />
+          <Basket />
+          <SearchMobile />
           <NextTopLoader />
           <QueryProvider>{children}</QueryProvider>
           <Footer />
+          <BottomBar />
         </ContextProvider>
       </body>
     </html>
