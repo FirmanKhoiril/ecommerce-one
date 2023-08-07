@@ -1,4 +1,4 @@
-import { Basket, BottomBar, Footer, Navbar, SearchMobile, Sidebar } from "@/components";
+import { BottomBar, Footer, Navbar, SearchMobile, Sidebar } from "@/components";
 import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
 import { Roboto } from "next/font/google";
@@ -19,7 +19,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ContextProvider>
           <Navbar />
           <Sidebar />
-          <Basket />
           <SearchMobile />
           <NextTopLoader />
           <QueryProvider>{children}</QueryProvider>

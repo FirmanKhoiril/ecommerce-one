@@ -1,24 +1,9 @@
 "use client";
 
-import { Card, Hero } from "@/components";
-import Categories from "@/components/Categories";
+import { Card, Discount, Hero, Categories } from "@/components";
 import { useGetProduct } from "@/hooks/useGetProduct";
+import { TCardProduct } from "@/utils/types";
 import { ColorRing } from "react-loader-spinner";
-
-type TCardProduct = {
-  name: string;
-  price: string;
-  normalPrice: string;
-  discount: number;
-  city: string;
-  _id: string;
-  image: any;
-  details: string;
-  tags: [string];
-  slug: {
-    current: string;
-  };
-};
 
 export default function Home() {
   const { data, isLoading, isFetching, isSuccess } = useGetProduct();
@@ -26,7 +11,7 @@ export default function Home() {
   return (
     <main className="flex flex-col w-full container py-4 px-2 md:px-14">
       <Hero />
-
+      <Discount />
       <Categories />
       <div className="flex overflow-x-auto scrollbar-none gap-2 py-4">
         {isLoading && isFetching ? (

@@ -8,5 +8,7 @@ import parfume from "./parfume.svg";
 import shirt from "./shirt.svg";
 import shirtKid from "./shirtKid.svg";
 import womenBag from "./womenBag.svg";
+import masak from "./masak.svg";
+import healty from "./healty.svg";
 
-export { all, skincare, baby, womenBag, parfume, shirt, shirtKid, outdoor, gudang, fishing };
+export { all, skincare, baby, healty, masak, womenBag, parfume, shirt, shirtKid, outdoor, gudang, fishing };

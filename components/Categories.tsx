@@ -23,7 +23,7 @@ const Categories = () => {
               name={item.name}
               onClick={() => setCategory(item.title)}
               aria-label={item.label}
-              className={`flex flex-col min-w-[100px] md:min-w-[120px] ${
+              className={`flex flex-col hover:-translate-y-1 min-w-[100px] md:min-w-[120px] ${
                 category === item.title ? "bg-primary text-white" : "bg-white text-black"
               } hover:bg-primary hover:text-white transition duration-300 items-center gap-1 shadow-md rounded-lg py-2 md:py-3`}
             >

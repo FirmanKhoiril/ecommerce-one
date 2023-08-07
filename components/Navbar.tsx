@@ -10,25 +10,18 @@ import { useGlobalState } from "@/hooks/useGlobalState";
 const lobster = Lobster_Two({ subsets: ["latin"], weight: ["400", "700"] });
 
 const Navbar = () => {
-  const { setActiveSidebar, activeSidebar, setActiveBasket, setActiveSearchMobile } = useGlobalState();
+  const { setActiveSidebar, activeSidebar, setActiveSearchMobile } = useGlobalState();
 
   const handleSidebar = () => {
     setActiveSidebar((prev: boolean) => !prev);
-    setActiveBasket(false);
     setActiveSearchMobile(false);
   };
 
   const handleSearchMobile = () => {
     setActiveSearchMobile((prev: boolean) => !prev);
-    setActiveBasket(false);
     setActiveSidebar(false);
   };
 
-  const handleActiveBasket = () => {
-    setActiveBasket((prev: boolean) => !prev);
-    setActiveSidebar(false);
-    setActiveSearchMobile(false);
-  };
   return (
     <nav className={`bg-white ${lobster.className} p-3 shadow-md w-full sticky top-0 z-30 flex justify-between lg:justify-around items-center`}>
       <div className="flex items-center md:gap-2 gap-1">
@@ -49,9 +42,9 @@ const Navbar = () => {
         <div className="hidden lg:flex">
           <SearchBar />
         </div>
-        <button name="buttonCardBasket" onClick={handleActiveBasket} className="p-2 ml-4 rounded-r-lg  hover:text-primary" aria-label="buttonCardBasket" type="button">
+        <Link href="/keranjang" className="p-2 ml-4 rounded-r-lg  hover:text-primary" aria-label="buttonCardBasket">
           <SlBasket size={24} />
-        </button>
+        </Link>
         <button name="buttonSearch" onClick={handleSearchMobile} className="p-2 rounded-r-lg lg:hidden inline-block  hover:text-primary" aria-label="buttonSearch" type="button">
           <AiOutlineSearch size={24} />
         </button>
