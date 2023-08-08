@@ -4,7 +4,6 @@ export { default as Sidebar } from "./Sidebar";
 export { default as Card } from "./Card";
 export { default as Hero } from "./Hero";
 export { default as SearchBar } from "./SearchBar";
-export { default as BottomBar } from "./BottomBar";
 export { default as SearchMobile } from "./SearchMobile";
 export { default as Discount } from "./Discount";
 export { default as Categories } from "./Categories";

@@ -1,5 +1,5 @@
 const Footer = () => {
-  return <footer className="md:flex hidden">footerter</footer>;
+  return <footer className="">footerter</footer>;
 };
 
 export default Footer;

@@ -4,7 +4,7 @@ export const categories = [
   {
     title: "all",
     label: "all",
-    name: "skincare",
+    name: "all",
     icon: all,
   },
   {
