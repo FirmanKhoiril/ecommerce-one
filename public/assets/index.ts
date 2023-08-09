@@ -10,5 +10,6 @@ import shirtKid from "./shirtKid.svg";
 import womenBag from "./womenBag.svg";
 import masak from "./masak.svg";
 import healty from "./healty.svg";
+import discount from "./discount.svg";
 
-export { all, skincare, baby, healty, masak, womenBag, parfume, shirt, shirtKid, outdoor, gudang, fishing };
+export { all, skincare, baby, discount, healty, masak, womenBag, parfume, shirt, shirtKid, outdoor, gudang, fishing };

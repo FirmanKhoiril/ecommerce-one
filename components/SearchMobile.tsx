@@ -18,7 +18,7 @@ const SearchMobile = () => {
           <button type="button" onClick={() => setActiveSearchMobile(false)} name="buttonCloseSearch" className="p-2 hover:text-primary rounded-full" aria-label="buttonCloseSearch">
             <IoIosArrowRoundBack size={28} />
           </button>
-          <input type="text" placeholder="Cari Produk..." className=" bg-blue-50 focus:bg-blue-100 rounded-full outline-none py-2 px-4 w-full grow mx-[6px]" />
+          <input type="text" placeholder="Cari Produk..." className=" bg-blue-50 border border-blue-100 focus:bg-blue-100 rounded-full focus:border-blue-300 outline-none py-2 px-4 w-full grow mx-[6px]" />
           <button type="submit" name="buttonCloseSearch" className="p-2 hover:text-primary rounded-full" aria-label="buttonCloseSearch">
             <AiOutlineSearch size={25} />
           </button>
