@@ -36,7 +36,7 @@ const Navbar = () => {
           </button>
         )}
         <Link href={"/"}>
-          <h1 className="text-2xl md:text-3xl flex text-primary font-bold">Nabila Beauty</h1>
+          <h1 className="text-lg sm:text-2xl md:text-3xl flex text-primary font-bold">Nabila Beauty</h1>
         </Link>
       </div>
       <div className="flex items-center gap-1 md:gap-2">
