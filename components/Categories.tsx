@@ -27,10 +27,10 @@ const Categories = () => {
               onClick={() => setCategory(item.title)}
               aria-label={item.label}
               className={`flex flex-col hover:-translate-y-1 min-w-[100px] md:min-w-[120px] ${
-                category === item.title ? "bg-primary text-white -translate-y-1" : "bg-white text-black"
-              } transition duration-300 items-center gap-1 shadow-md rounded-lg py-2 md:py-3`}
+                category === item.title ? "bg-primary text-white" : "bg-white text-black"
+              } transition duration-300 items-center gap-1 shadow-md rounded-lg py-2 md:py-[10px]`}
             >
-              <Image src={item.icon} className="object-contain md:h-10 h-8 w-8 md:w-10" loading="lazy" alt={item.title} />
+              <Image src={item.icon} className="object-contain md:h-9 h-7 w-7 md:w-9" loading="lazy" alt={item.title} />
               <p className="text-[12px] md:text-sm capitalize">{item.title}</p>
             </button>
           ))}
