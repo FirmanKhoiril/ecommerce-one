@@ -46,10 +46,11 @@ const Navbar = () => {
         <button name="buttonSearch" onClick={handleSearchMobile} className="p-[6px] sm:p-2 rounded-full lg:hidden inline-block  hover:text-primary" aria-label="buttonSearch" type="button">
           <AiOutlineSearch size={24} />
         </button>
-        <Link href="/keranjang">
+        <Link href="/keranjang" className="relative">
           <button type="button" name="buttonCart" className="p-[6px] sm:p-2 rounded-full  hover:text-primary" aria-label="buttonCardBasket">
             <SlBasket size={24} />
           </button>
+          <p className="absolute top-0 right-0 z-10 border border-red-500 rounded-full text-[10px] px-[3px]">{"0"}</p>
         </Link>
         <Link href="/login">
           <button type="button" name="buttonCart" className="p-[6px] sm:p-2 rounded-full  hover:text-primary" aria-label="buttonCardBasket">

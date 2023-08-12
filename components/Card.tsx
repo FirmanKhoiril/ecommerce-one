@@ -1,5 +1,5 @@
 import { urlFor } from "@/client";
-import { ICardProduct } from "@/utils/types";
+import { ICardProduct } from "@/types/types";
 import Image from "next/image";
 import Link from "next/link";
 import { SlBasket } from "react-icons/sl";

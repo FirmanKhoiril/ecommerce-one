@@ -2,7 +2,7 @@
 
 import { Card, Discount, Hero, Categories } from "@/components";
 import { useGetProduct } from "@/hooks/useGetProduct";
-import { TCardProduct } from "@/utils/types";
+import { TCardProduct } from "@/types/types";
 import { ColorRing } from "react-loader-spinner";
 
 export default function Home() {
