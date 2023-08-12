@@ -1,4 +1,4 @@
-import { all, baby, discount, fishing, gudang, healty, masak, outdoor, parfume, shirt, shirtKid, skincare, womenBag } from "../public/assets";
+import { all, baby, clean, discount, fishing, gudang, healty, laundry, masak, outdoor, parfume, shirt, shirtKid, skincare, womenBag } from "../public/assets";
 
 export const categories = [
   {
@@ -32,6 +32,12 @@ export const categories = [
     icon: shirt,
   },
   {
+    title: "alat Kebersihan",
+    label: "alatKebersihan",
+    name: "alatKebersihan",
+    icon: clean,
+  },
+  {
     title: "special Diskon",
     label: "SpecialDiscount",
     name: "SpecialDiscount",
@@ -42,6 +48,12 @@ export const categories = [
     label: "bajuAnakanak",
     name: "bajuAnakanak",
     icon: shirtKid,
+  },
+  {
+    title: "laundry",
+    label: "laundry",
+    name: "laundry",
+    icon: laundry,
   },
   {
     title: "kesehatan",

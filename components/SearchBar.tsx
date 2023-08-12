@@ -1,10 +1,7 @@
 "use client";
 
 import { useGlobalState } from "@/hooks/useGlobalState";
-import { Roboto } from "next/font/google";
 import { AiOutlineSearch } from "react-icons/ai";
-
-const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700", "900"], adjustFontFallback: true });
 
 const SearchBar = () => {
   const { searchTerm, setSearchTerm } = useGlobalState();
@@ -16,7 +13,7 @@ const SearchBar = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className={`${roboto.className} flex flex-grow items-center justify-center relative`}>
+    <form onSubmit={handleSubmit} className={` flex flex-grow items-center justify-center relative`}>
       <input
         type="text"
         value={searchTerm}

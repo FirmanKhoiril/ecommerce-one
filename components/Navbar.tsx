@@ -7,6 +7,9 @@ import { Lobster_Two } from "next/font/google";
 import { HiOutlineUserCircle } from "react-icons/hi";
 import { SlBasket } from "react-icons/sl";
 import { useGlobalState } from "@/hooks/useGlobalState";
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700", "900"], adjustFontFallback: true });
 
 const lobster = Lobster_Two({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -40,7 +43,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="flex items-center gap-1 md:gap-2">
-        <div className="hidden lg:flex">
+        <div className={` ${roboto.className} hidden lg:flex`}>
           <SearchBar />
         </div>
         <button name="buttonSearch" onClick={handleSearchMobile} className="p-[6px] sm:p-2 rounded-full lg:hidden inline-block  hover:text-primary" aria-label="buttonSearch" type="button">
@@ -50,7 +53,7 @@ const Navbar = () => {
           <button type="button" name="buttonCart" className="p-[6px] sm:p-2 rounded-full  hover:text-primary" aria-label="buttonCardBasket">
             <SlBasket size={24} />
           </button>
-          <p className="absolute top-0 right-0 z-10 border border-red-500 rounded-full text-[10px] px-[3px]">{"0"}</p>
+          <p className="absolute top-0 right-0 z-10 border border-red-600 rounded-full text-[11px] px-[3px]">{"0"}</p>
         </Link>
         <Link href="/login">
           <button type="button" name="buttonCart" className="p-[6px] sm:p-2 rounded-full  hover:text-primary" aria-label="buttonCardBasket">
