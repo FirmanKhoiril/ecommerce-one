@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-blue-500/10 selection:bg-primary selection:text-white;
+  @apply bg-blue-500/10 selection:bg-primary selection:text-white overflow-x-hidden;
 }

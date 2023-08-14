@@ -13,6 +13,19 @@ export type TCardProduct = {
   };
 };
 
+export type TBanner = {
+  _id: string;
+  alt: string;
+  bigText: string;
+  description: string;
+  image: {
+    asset: {
+      _ref: string;
+    };
+  };
+  buttonLink: string;
+};
+
 export interface ICardProduct {
   name: string;
   price: string;
