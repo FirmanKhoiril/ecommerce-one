@@ -1,5 +1,5 @@
 const Discount = () => {
-  return <div>Discount</div>;
+  return <section className="py-4">Discount</section>;
 };
 
 export default Discount;

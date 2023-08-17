@@ -9,9 +9,8 @@ import { SlBasket } from "react-icons/sl";
 import { useGlobalState } from "@/hooks/useGlobalState";
 import { Roboto } from "next/font/google";
 
+const lobster = Lobster_Two({ subsets: ["latin"], weight: ["400", "700"], adjustFontFallback: true });
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700", "900"], adjustFontFallback: true });
-
-const lobster = Lobster_Two({ subsets: ["latin"], weight: ["400", "700"] });
 
 const Navbar = () => {
   const { setActiveSidebar, activeSidebar, setActiveSearchMobile } = useGlobalState();
@@ -27,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`bg-white ${lobster.className} p-3 shadow-md w-full sticky top-0 z-30 flex justify-between lg:justify-around items-center`}>
+    <nav className={`bg-white  p-3 shadow-md w-full sticky top-0 z-30 flex justify-between lg:justify-around items-center`}>
       <div className="flex items-center md:gap-2 gap-1">
         {activeSidebar ? (
           <button type="button" onClick={handleSidebar} name="buttonClose" aria-label="buttonClose" className="p-[6px] sm:p-2 rounded-full hover:opacity-80">
@@ -39,7 +38,7 @@ const Navbar = () => {
           </button>
         )}
         <Link href={"/"}>
-          <h1 className="text-xl sm:text-2xl md:text-3xl flex text-primary font-bold">Nabila Beauty</h1>
+          <h1 className={`text-xl sm:text-2xl md:text-3xl flex text-primary font-bold ${lobster.className}`}>Nabila Beauty</h1>
         </Link>
       </div>
       <div className="flex items-center gap-1 md:gap-2">

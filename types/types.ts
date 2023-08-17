@@ -18,6 +18,12 @@ export type TBanner = {
   alt: string;
   bigText: string;
   description: string;
+  price: string;
+  normalPrice: string;
+  backgroundColor: string;
+  title: string;
+  textColor: string;
+  discount: string;
   image: {
     asset: {
       _ref: string;
