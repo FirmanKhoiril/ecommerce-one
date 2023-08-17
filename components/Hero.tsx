@@ -35,7 +35,7 @@ const Hero = () => {
         <>
           {data?.map((item: TBanner) => (
             <div key={item._id} className={`flex sm:px-6 px-4 md:px-14 lg:px-20  items-center  py-8 md:py-14 md:flex-row flex-col flex-wrap justify-around  relative gap-8 md:gap-2 `}>
-              <div className="flex flex-col gap-2 w-[450px]">
+              <div className="flex flex-col gap-2 max-w-[450px]">
                 <div className="flex flex-col">
                   <h1 className="font-bold text-3xl md:text-4xl tracking-tight">{item.bigText}</h1>
                   <div className="flex items-center leading-[46px] md:leading-[54px] gap-2">
@@ -56,7 +56,7 @@ const Hero = () => {
                   </button>
                 </Link>
               </div>
-              <div className="flex flex-col items-start w-[450px] gap-2">
+              <div className="flex flex-col items-start max-w-[450px] gap-2">
                 <Image src={urlFor(item.image.asset._ref).width(600).url()} alt={item.alt} width={300} height={300} className="object-contain drop-shadow-2xl" />
                 <div className="gap-1 flex flex-col">
                   <h1 className="text-white font-semibold text-xl">{item.title}</h1>
