@@ -9,7 +9,7 @@ export default function Home() {
   const { data, isLoading, isFetching, isSuccess } = useGetProduct();
 
   return (
-    <main className="flex flex-col w-full container py-4 px-2 mx-2 md:px-14">
+    <main className="flex flex-col w-full container py-4 px-2  md:px-14">
       <Hero />
       <Discount />
       <Categories />
