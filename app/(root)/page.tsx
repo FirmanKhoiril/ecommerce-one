@@ -10,8 +10,8 @@ export default function Home() {
   const { data, isLoading, isFetching, isSuccess } = useGetProduct();
 
   return (
-    <main className="flex flex-col py-4">
-      <Container>
+    <Container>
+      <main className="flex flex-col py-4">
         <Hero />
         <Discount />
         <Categories />
@@ -26,7 +26,7 @@ export default function Home() {
             ""
           )}
         </div>
-      </Container>
-    </main>
+      </main>
+    </Container>
   );
 }

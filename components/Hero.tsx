@@ -83,8 +83,8 @@ const Hero = () => {
                 <div className="flex flex-col w-full items-start max-w-[450px] gap-2">
                   <Image src={urlFor(item.image.asset._ref).width(700).url()} alt={item.alt} width={300} height={300} className="object-contain md:w-[300px] w-[260px] drop-shadow-2xl" />
                   <div className="gap-1 flex flex-col">
-                    <h1 className="text-white font-semibold text-xl">{item.title}</h1>
-                    <p className="opacity-90 text-[15px]">{item.description}.</p>
+                    <h1 className="text-white font-semibold text-2xl">{item.title}</h1>
+                    <p className="opacity-[0.95] text-[16px]">{item.description}.</p>
                   </div>
                 </div>
               </div>
