@@ -3,6 +3,7 @@
 import { useGlobalState } from "@/hooks/useGlobalState";
 import { AiOutlineSearch } from "react-icons/ai";
 import { useRouter } from "next/navigation";
+import { Button } from "./";
 
 const SearchBar = () => {
   const router = useRouter();
@@ -23,9 +24,13 @@ const SearchBar = () => {
         placeholder="Cari Product"
         className="px-4 shadow-md bg-blue-50 placeholder:text-black/50 py-2 peer focus:bg-blue-100 focus:border-blue-500/60 border border-transparent outline-none  grow min-w-[300px] max-w-[500px] transition duration-300"
       />
-      <button className=" p-[9px] peer-focus:bg-primary/80 hover:bg-primary/80 shadow-md text-white transition duration-[0.4s] rounded-r-lg bg-primary" aria-label="buttonSearch" type="submit">
-        <AiOutlineSearch size={24} />
-      </button>
+      <Button
+        name="buttonSearch"
+        className=" p-[9px] peer-focus:bg-primary/80 hover:bg-primary/80 shadow-md text-white transition duration-[0.4s] rounded-r-lg bg-primary"
+        label="buttonSearch"
+        type="submit"
+        icon={<AiOutlineSearch size={24} />}
+      />
     </form>
   );
 };

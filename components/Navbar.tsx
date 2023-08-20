@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { SearchBar } from "./";
+import { Button, SearchBar } from "./";
 import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
 import { Lobster_Two } from "next/font/google";
 import { HiOutlineUserCircle } from "react-icons/hi";
@@ -29,13 +29,9 @@ const Navbar = () => {
     <nav className={`bg-white  p-3 shadow-md w-full sticky top-0 z-30 flex justify-between lg:justify-around items-center`}>
       <div className="flex items-center md:gap-2 gap-1">
         {activeSidebar ? (
-          <button type="button" onClick={handleSidebar} name="buttonClose" aria-label="buttonClose" className="p-[6px] sm:p-2 rounded-full hover:opacity-80">
-            <AiOutlineClose size={20} />
-          </button>
+          <Button icon={<AiOutlineClose size={20} />} type="button" onClick={handleSidebar} name="buttonClose" label="buttonClose" className="p-[6px] sm:p-2 rounded-full hover:opacity-80" />
         ) : (
-          <button type="button" onClick={handleSidebar} name="buttonMenu" aria-label="buttonMenu" className="p-[6px] sm:p-2 rounded-full hover:opacity-80">
-            <AiOutlineMenu size={20} />
-          </button>
+          <Button icon={<AiOutlineMenu size={20} />} type="button" onClick={handleSidebar} name="buttonMenu" label="buttonMenu" className="p-[6px] sm:p-2 rounded-full hover:opacity-80" />
         )}
         <Link href={"/"}>
           <h1 className={`text-xl sm:text-2xl md:text-3xl flex text-primary font-bold ${lobster.className}`}>Nabila Beauty</h1>
@@ -45,19 +41,20 @@ const Navbar = () => {
         <div className={` ${roboto.className} hidden lg:flex`}>
           <SearchBar />
         </div>
-        <button name="buttonSearch" onClick={handleSearchMobile} className="p-[6px] sm:p-2 rounded-full lg:hidden inline-block  hover:text-primary" aria-label="buttonSearch" type="button">
-          <AiOutlineSearch size={24} />
-        </button>
+        <Button name="buttonSearch" onClick={handleSearchMobile} className="p-[6px] sm:p-2 rounded-full lg:hidden inline-block  hover:text-primary" label="buttonSearch" type="button" icon={<AiOutlineSearch size={24} />} />
         <Link href="/keranjang" className="relative">
-          <button type="button" name="buttonCart" className="p-[6px] sm:p-2 rounded-full  hover:text-primary" aria-label="buttonCardBasket">
-            <SlBasket size={24} />
-          </button>
-          <p className="absolute top-0 right-0 z-10 border border-red-600 rounded-full text-[11px] px-[3px]">{"0"}</p>
+          <Button
+            type="button"
+            title="0"
+            textClassName=" absolute top-0 right-0 z-10 border border-red-600 rounded-full text-[11px] px-[3px]"
+            icon={<SlBasket size={24} />}
+            name="buttonCart"
+            className="p-[6px] sm:p-2 rounded-full  hover:text-primary"
+            label="buttonCardBasket"
+          />
         </Link>
         <Link href="/login">
-          <button type="button" name="buttonCart" className="p-[6px] sm:p-2 rounded-full  hover:text-primary" aria-label="buttonCardBasket">
-            <HiOutlineUserCircle size={24} />
-          </button>
+          <Button type="button" name="buttonCart" className="p-[6px] sm:p-2 rounded-full  hover:text-primary" label="buttonCardBasket" icon={<HiOutlineUserCircle size={24} />} />
         </Link>
       </div>
     </nav>

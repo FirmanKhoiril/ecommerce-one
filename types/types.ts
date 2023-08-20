@@ -1,3 +1,5 @@
+import { Icon } from "next/dist/lib/metadata/types/metadata-types";
+
 export type TCardProduct = {
   name: string;
   price: string;
@@ -13,6 +15,17 @@ export type TCardProduct = {
   };
 };
 
+export interface IButton {
+  name: string;
+  label: string;
+  onClick?: () => void | undefined;
+  type: "button" | "submit";
+  disabled?: boolean;
+  title?: string;
+  icon?: Element | Icon | any;
+  textClassName?: string;
+  className: string;
+}
 export type TBanner = {
   _id: string;
   alt: string;

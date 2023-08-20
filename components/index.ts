@@ -7,3 +7,5 @@ export { default as SearchBar } from "./SearchBar";
 export { default as SearchMobile } from "./SearchMobile";
 export { default as Discount } from "./Discount";
 export { default as Categories } from "./Categories";
+export { default as Button } from "./Button";
+export { default as Input } from "./Input";
