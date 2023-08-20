@@ -43,7 +43,7 @@ const Hero = () => {
           ) : (
             isSuccess &&
             data?.map((item: TBanner) => (
-              <div key={item._id} className={`flex sm:px-6 px-2 md:px-14 lg:px-20  items-center  py-8 md:py-14 md:flex-row flex-col flex-wrap justify-around  relative gap-8 md:gap-2 `}>
+              <div key={item._id} className={`flex  px-[10px] items-center  py-8 md:py-14 md:flex-row flex-col flex-wrap justify-around  relative gap-8 md:gap-2 `}>
                 <div className="flex flex-col gap-2 w-full max-w-[450px]">
                   <div className="flex flex-col">
                     <h1 className="font-bold text-3xl md:text-4xl tracking-tight">{item.bigText}</h1>

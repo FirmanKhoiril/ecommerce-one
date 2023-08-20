@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useContext, createContext } from "react";
+import { useState, useContext, createContext, useMemo } from "react";
 
 const StateContext = createContext({});
 
@@ -9,7 +9,21 @@ export const ContextProvider = ({ children }: { children: React.ReactNode }) => 
   const [category, setCategory] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
   const [activeSearchMobile, setActiveSearchMobile] = useState(false);
-  return <StateContext.Provider value={{ searchTerm, setSearchTerm, activeSidebar, activeSearchMobile, setActiveSearchMobile, setActiveSidebar, category, setCategory }}>{children}</StateContext.Provider>;
+
+  const contextValue = useMemo(() => {
+    return {
+      searchTerm,
+      setSearchTerm,
+      activeSidebar,
+      activeSearchMobile,
+      setActiveSearchMobile,
+      setActiveSidebar,
+      category,
+      setCategory,
+    };
+  }, [searchTerm, activeSidebar, activeSearchMobile, category]);
+
+  return <StateContext.Provider value={contextValue}>{children}</StateContext.Provider>;
 };
 
 export const useGlobalState = (): any => useContext(StateContext);
