@@ -46,7 +46,7 @@ const Navbar = () => {
           <Button
             type="button"
             title="0"
-            textClassName=" absolute top-0 right-0 z-10 border border-red-600 rounded-full text-[11px] px-[3px]"
+            textClassName=" absolute top-0 -right-1 z-10 border border-red-600 rounded-full text-[11px] px-[4px]"
             icon={<SlBasket size={24} />}
             name="buttonCart"
             className="p-[6px] sm:p-2 rounded-full  hover:text-primary"
