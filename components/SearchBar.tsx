@@ -22,7 +22,7 @@ const SearchBar = () => {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         placeholder="Cari Product"
-        className="px-4 shadow-md bg-blue-50 placeholder:text-black/50 py-2 peer focus:bg-blue-100 focus:border-blue-500/60 border border-transparent outline-none  grow min-w-[300px] max-w-[500px] transition duration-300"
+        className="px-4 shadow-md caret-blue-500 bg-blue-50 placeholder:text-black/50 py-2 peer focus:bg-blue-100 focus:border-blue-500/60 border border-transparent outline-none  grow min-w-[300px] max-w-[500px] transition duration-300"
       />
       <Button
         name="buttonSearch"

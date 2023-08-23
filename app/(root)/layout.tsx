@@ -1,4 +1,4 @@
-import { Footer, Navbar, SearchMobile, Sidebar, Whatsapp } from "@/components";
+import { Footer, Navbar, SearchMobile, Sidebar, SosialMedia } from "@/components";
 import NextTopLoader from "nextjs-toploader";
 import "../globals.css";
 import { Roboto } from "next/font/google";
@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SearchMobile />
           <NextTopLoader />
           <QueryProvider>{children}</QueryProvider>
-          <Whatsapp />
+          <SosialMedia />
           <Footer />
         </ContextProvider>
       </body>
