@@ -1,3 +1,38 @@
+import { BiLogoGmail } from "react-icons/bi";
+import { BsInstagram, BsWhatsapp } from "react-icons/bs";
+import { FaTelegramPlane } from "react-icons/fa";
+
+export const sosialMedias = [
+  {
+    name: "buttonWhatsapp",
+    label: "buttonWhatsapp",
+    linkUrl: "",
+    backgroundColor: "bg-green-500 hover:bg-green-600",
+    icon: <BsWhatsapp />,
+  },
+  {
+    name: "buttoonInstagram",
+    label: "buttoonInstagram",
+    linkUrl: "",
+    backgroundColor: "bg-pink-500 hover:bg-pink-600",
+    icon: <BsInstagram />,
+  },
+  {
+    name: "buttonTelegram",
+    label: "buttonTelegram",
+    linkUrl: "",
+    backgroundColor: "bg-sky-400 hover:bg-sky-500",
+    icon: <FaTelegramPlane />,
+  },
+  {
+    name: "buttonGmail",
+    label: "buttonGmail",
+    linkUrl: "",
+    backgroundColor: "bg-red-500 hover:bg-red-600",
+    icon: <BiLogoGmail />,
+  },
+];
+
 export const categories = [
   {
     title: "all",

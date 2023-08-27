@@ -34,7 +34,7 @@ const Hero = () => {
   };
 
   return (
-    <section className={`w-full ${poppins.className} rounded-2xl shadow-lg bg-white text-black/90  h-auto`}>
+    <section className={`w-full ${poppins.className} rounded-xl shadow-sm bg-white text-black/90  h-auto`}>
       <Slider {...settings}>
         <>
           {isLoading && isFetching ? (

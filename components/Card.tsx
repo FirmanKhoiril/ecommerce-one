@@ -4,11 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { SlBasket } from "react-icons/sl";
 import { Button } from "./";
-import { BsWhatsapp } from "react-icons/bs";
 
 const Card = ({ name, price, normalPrice, city, image, discount, slug: { current } }: ICardProduct) => {
   return (
-    <div className="w-[160px] bg-white hover:scale-[1.01] min-h-[280px] transition duration-300  hover:border-blue-500/60 border overflow-hidden border-transparent h-auto relative sm:static pb-2 drop-shadow-sm hover:drop-shadow-lg">
+    <div className="w-[160px] bg-white hover:scale-[1.01] min-h-[280px] transition duration-300  hover:border-blue-500/60 border border-transparent h-auto relative sm:static pb-2 drop-shadow-sm hover:drop-shadow-lg">
       <Link href={`/product/${current}`} className="flex items-start flex-col gap-1">
         <Image src={urlFor(image[0]?.asset?._ref).width(300).url()} loading="lazy" quality={100} alt={image[0]?.alt} width={300} height={150} />
         <div className="px-1 sm:px-2 py-1 flex flex-col gap-[2px]">

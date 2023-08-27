@@ -2,18 +2,17 @@
 
 import Link from "next/link";
 import { Button, SearchBar } from "./";
-import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
-import { Lobster_Two } from "next/font/google";
+import { AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
+import { Lobster_Two, Roboto } from "next/font/google";
 import { HiOutlineUserCircle } from "react-icons/hi";
 import { SlBasket } from "react-icons/sl";
 import { useGlobalState } from "@/hooks/useGlobalState";
-import { Roboto } from "next/font/google";
 
 const lobster = Lobster_Two({ subsets: ["latin"], weight: ["400", "700"], adjustFontFallback: true });
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700", "900"], adjustFontFallback: true });
 
 const Navbar = () => {
-  const { setActiveSidebar, activeSidebar, setActiveSearchMobile } = useGlobalState();
+  const { setActiveSidebar, setActiveSearchMobile } = useGlobalState();
 
   const handleSidebar = () => {
     setActiveSidebar((prev: boolean) => !prev);
@@ -28,11 +27,7 @@ const Navbar = () => {
   return (
     <nav className={`bg-white  p-3 shadow-md w-full sticky top-0 z-30 flex justify-between lg:justify-around items-center`}>
       <div className="flex items-center md:gap-2 gap-1">
-        {activeSidebar ? (
-          <Button icon={<AiOutlineClose size={20} />} type="button" onClick={handleSidebar} name="buttonClose" label="buttonClose" className="p-[6px] sm:p-2 rounded-full hover:opacity-80" />
-        ) : (
-          <Button icon={<AiOutlineMenu size={20} />} type="button" onClick={handleSidebar} name="buttonMenu" label="buttonMenu" className="p-[6px] sm:p-2 rounded-full hover:opacity-80" />
-        )}
+        <Button icon={<AiOutlineMenu size={20} />} type="button" onClick={handleSidebar} name="buttonMenu" label="buttonMenu" className="p-[6px] sm:p-2 rounded-full hover:opacity-80" />
         <Link href={"/"}>
           <h1 className={`text-xl sm:text-2xl md:text-3xl flex text-primary font-bold ${lobster.className}`}>Nabila Beauty</h1>
         </Link>
