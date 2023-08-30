@@ -4,7 +4,6 @@ import { useGlobalState } from "@/hooks/useGlobalState";
 import { categories } from "@/utils/constan";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
-
 import { Poppins } from "next/font/google";
 import { Button } from "./";
 import { Box } from "@mui/material";
@@ -42,7 +41,7 @@ const Categories = () => {
               textClassName="text-[12px] md:text-sm capitalize"
               onClick={() => setCategory(item.tag)}
               label={item.label}
-              className={`flex flex-col ${item.title.length < 8 ? "min-w-[70px] md:min-w-[80px]" : "min-w-[110px] md:min-w-[125px]"} ${
+              className={`flex flex-col ${item.title.length < 8 ? "min-w-[70px] md:min-w-[80px] " : "min-w-[110px] md:min-w-[125px]"} ${
                 category === item.tag ? "bg-primary text-white" : "bg-white/80 text-black hover:bg-blue-300"
               } transition duration-200  items-center gap-1 shadow-[0px_1px_2px_1px] shadow-black/10 rounded-lg py-[9px]`}
             />

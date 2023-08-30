@@ -1,11 +1,19 @@
-import { BsWhatsapp } from "react-icons/bs";
+import { sosialMedias } from "@/utils/constan";
+import { Button } from "./";
 
 const Whatsapp = () => {
   return (
-    <div className="fixed bottom-2 right-4 p-2 hover:bg-green-600 transition duration-150 text-white rounded-full bg-green-500 drop-shadow-md z-10">
-      <a href="" target="_blank">
-        <BsWhatsapp size={25} />
-      </a>
+    <div className="flex w-full flex-row justify-center gap-2">
+      {sosialMedias.map((item) => (
+        <Button
+          key={item.name}
+          type="button"
+          className={`flex px-2 sm:px-3.5 sm:py-3 py-2 text-white ${item?.backgroundColor} transition duration-150 items-center drop-shadow-md rounded-lg`}
+          name={item.name}
+          label={item.label}
+          icon={<span className="text-lg md:text-xl">{item.icon}</span>}
+        />
+      ))}
     </div>
   );
 };

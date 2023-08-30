@@ -10,3 +10,4 @@ export { default as Categories } from "./Categories";
 export { default as Button } from "./Button";
 export { default as Input } from "./Input";
 export { default as SosialMedia } from "./SosialMedia";
+export { default as NavLogin } from "./NavLogin";

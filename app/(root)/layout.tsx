@@ -9,7 +9,7 @@ const roboto = Roboto({ subsets: ["latin"], weight: ["400", "300", "500", "700",
 
 export const metadata = {
   title: "Nabila Beauty | Toko Online Nabila Beauty",
-  description: "Toko Online Nabila Beauty Menjual produk Original Terbaik Seantero Nusantara",
+  description: "Toko Online Nabila Beauty Menjual produk Original Terbaik Se-Indonesia",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -1,9 +1,8 @@
 "use client";
 
 import { useGlobalState } from "@/hooks/useGlobalState";
-import { sosialMedias } from "@/utils/constan";
+import { Button, SosialMedia } from "./";
 import { AiOutlineClose } from "react-icons/ai";
-import { Button } from "./";
 import Link from "next/link";
 import { Lobster_Two } from "next/font/google";
 
@@ -29,18 +28,7 @@ const Sidebar = () => {
             </Link>
           </div>
         </div>
-        <div className="flex w-full flex-row justify-center gap-2">
-          {sosialMedias.map((item) => (
-            <Button
-              key={item.name}
-              type="button"
-              className={`flex px-2 sm:px-3.5 sm:py-3 py-2 text-white ${item?.backgroundColor} transition duration-150 items-center drop-shadow-md rounded-lg`}
-              name={item.name}
-              label={item.label}
-              icon={<span className="text-lg md:text-xl">{item.icon}</span>}
-            />
-          ))}
-        </div>
+        <SosialMedia />
       </aside>
     </>
   );
