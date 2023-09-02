@@ -23,9 +23,9 @@ const SearchMobile = () => {
           <input
             type="text"
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={(e: any) => setSearchTerm(e.target.value)}
             placeholder="Cari Produk..."
-            className=" bg-blue-50 border caret-blue-500 border-blue-100 focus:bg-blue-100 focus:placeholder:text-black/60 rounded-full focus:border-blue-300 outline-none py-2 px-4 w-full grow mx-[6px]"
+            className="bg-blue-50 border caret-blue-500 placeholder:text-black/50 border-blue-100 focus:bg-blue-100 focus:placeholder:text-black/60 rounded-full focus:border-blue-300 outline-none py-2 px-4 w-full grow mx-[5px]"
           />
           <Button type="submit" name="buttonCloseSearch" className="p-2 hover:text-primary rounded-full" label="buttonCloseSearch" icon={<AiOutlineSearch size={25} />} />
         </form>

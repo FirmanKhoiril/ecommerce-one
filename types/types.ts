@@ -15,6 +15,15 @@ export type TCardProduct = {
   };
 };
 
+export type TInput = {
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  label?: string;
+  isActive?: boolean;
+  type: string;
+  placeholder: string;
+  inputStyle: string;
+};
 export interface IButton {
   name: string;
   label: string;
