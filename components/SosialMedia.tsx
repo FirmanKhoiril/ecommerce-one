@@ -3,7 +3,7 @@ import { Button } from "./";
 
 const Whatsapp = () => {
   return (
-    <div className="flex w-full flex-row justify-center gap-2">
+    <div className="flex w-full flex-row pb-4 justify-center gap-2">
       {sosialMedias.map((item) => (
         <Button
           key={item.name}

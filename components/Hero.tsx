@@ -33,29 +33,19 @@ const Hero = () => {
     slidesToScroll: 1,
   };
 
-  if (isLoading && isFetching) return <div className="h-[42vh] w-full flex justify-center items-center"></div>;
+  if (isLoading && isFetching) return <div className="h-[42vh] bg-white w-full flex justify-center items-center"></div>;
   if (isError) return <div className="">Error</div>;
 
   return (
-    <Slider {...settings}>
-      <section className={`w-full ${poppins.className} rounded-xl shadow-sm bg-white text-black/90  h-auto`}>
-        {isSuccess &&
-          data?.map((item: TBanner) => (
-            <div key={item._id} className={`flex px-[10px] items-center  py-8 md:py-14 md:flex-row flex-col flex-wrap justify-around  relative gap-8 md:gap-2 `}>
-              <div className="flex flex-col gap-2 w-full max-w-[450px]">
-                <div className="flex flex-col">
-                  <h1 className="font-[600] text-3xl md:text-4xl tracking-tight">{item.bigText}</h1>
-                  <div className="flex items-center leading-[46px] md:leading-[54px] gap-2">
-                    <h3 className="text-[18px] md:text-[28px] tracking-tight  font-semibold text-black/50">Diskon</h3>
-                    <p className="text-[28px] md:text-[40px] font-semibold">{item.discount}%</p>
-                  </div>
-                  <div className="flex gap-4 tracking-tight items-center">
-                    <Box sx={{ position: "relative" }}>
-                      <span className="absolute h-[2px] bg-black/40 bottom-[10px] md:bottom-[13px] w-[80px] md:w-[94px] -left-1 md:-left-[3px]"></span>
-                      <p className="text-black/80 text-[15px]  md:text-lg">Rp{item.normalPrice}</p>
-                    </Box>
-                    <h1 className="text-2xl md:text-4xl font-bold text-primary/90">Rp{item.price}</h1>
-                  </div>
+    <Slider {...settings} className={`w-full rounded-xl shadow-sm relative min-h-[42vh]  bg-white text-black/90  h-auto`}>
+      {isSuccess &&
+        data?.map((item: TBanner) => (
+          <section key={item._id}>
+            <div className={`flex px-[10px] items-center  py-8  md:flex-row flex-col flex-wrap justify-around  relative gap-8 md:gap-2 `}>
+              <div className="flex flex-col gap-3 w-full max-w-[450px]">
+                <div className="flex flex-col gap-2">
+                  <h1 className="font-[700] text-3xl md:text-4xl leading-10 tracking-tight">{item.bigText}</h1>
+                  <p className="text-slate-500 text-sm md:text-[16px]">{item.description}.</p>
                 </div>
                 <Box sx={{ display: "flex", gap: 1, alignItems: "center", mt: 1 }}>
                   <Link href={`/product/${item.buttonLink}`}>
@@ -78,16 +68,12 @@ const Hero = () => {
                   />
                 </Box>
               </div>
-              <div className="flex flex-col w-full items-start max-w-[450px] gap-2">
-                <Image src={urlFor(item.image.asset._ref).width(700).url()} alt={item.alt} width={300} height={300} className="object-contain md:w-[300px] w-[260px] drop-shadow-xl" />
-                <Box sx={{ gap: 0.5, display: "flex", flexDirection: "column" }}>
-                  <h1 className="text-black font-semibold text-xl sm:text-2xl">{item.title}</h1>
-                  <p className="text-slate-500 text-sm md:text-[16px]">{item.description}.</p>
-                </Box>
+              <div className={` ${poppins.className} flex flex-col w-full items-start md:max-h-[300px] max-h-[260px] max-w-[450px] gap-2`}>
+                <Image src={urlFor(item.image.asset._ref).url()} alt={item.alt} width={300} height={300} className="object-contain md:max-w-[300px] md:max-h-[300px] max-h-[260px] wmax-w-[260px] drop-shadow-xl" />
               </div>
             </div>
-          ))}
-      </section>
+          </section>
+        ))}
     </Slider>
   );
 };

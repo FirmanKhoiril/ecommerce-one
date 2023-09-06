@@ -43,7 +43,7 @@ const Categories = () => {
               label={item.label}
               className={`flex flex-col ${item.title.length < 8 ? "min-w-[70px] md:min-w-[80px] " : "min-w-[110px] md:min-w-[125px]"} ${
                 category === item.tag ? "bg-primary text-white" : "bg-white/80 text-black hover:bg-blue-300"
-              } transition duration-200  items-center gap-1 shadow-[0px_1px_2px_1px] shadow-black/10 rounded-lg py-[9px]`}
+              } transition duration-200  items-center gap-1 shadow-[0px_1px_2px_1px] shadow-black/10 rounded-lg py-1.5 md:py-[9px]`}
             />
           ))}
         </Box>
