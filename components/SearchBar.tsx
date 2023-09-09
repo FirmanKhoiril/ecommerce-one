@@ -22,7 +22,7 @@ const SearchBar = () => {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         placeholder="Cari Product"
-        inputStyle="px-4 shadow-md caret-emerald-500 bg-blue-50 placeholder:text-black/50 py-2 peer focus:bg-blue-100 focus:border-blue-500/60 border border-transparent outline-none  grow min-w-[300px] max-w-[500px] font-light rounded-l-sm transition rounded-r-lg duration-300"
+        inputStyle="px-4 shadow-md bg-blue-50 border-blue-500/60 placeholder:text-black/50 py-2 peer focus:bg-blue-100  focus:border-blue-500 border outline-none  grow min-w-[300px] max-w-[500px] font-light rounded-l-sm transition rounded-r-lg duration-300"
       />
       {searchTerm.length > 0 ? <Button name="buttonClear" label="buttonClear" type="button" className="absolute rounded-full p-1 right-12" icon={<AiOutlineClose size={18} />} /> : ""}
       <Button

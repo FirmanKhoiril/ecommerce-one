@@ -69,7 +69,7 @@ const Hero = () => {
                 </Box>
               </div>
               <div className={` ${poppins.className} flex flex-col w-full items-start md:max-h-[300px] max-h-[260px] max-w-[450px] gap-2`}>
-                <Image src={urlFor(item.image.asset._ref).url()} alt={item.alt} width={300} height={300} className="object-contain md:max-w-[300px] md:max-h-[300px] max-h-[260px] wmax-w-[260px] drop-shadow-xl" />
+                <Image src={urlFor(item.image.asset._ref).width(300).url()} alt={item.alt} width={300} height={150} quality={100} className=" drop-shadow-xl" />
               </div>
             </div>
           </section>

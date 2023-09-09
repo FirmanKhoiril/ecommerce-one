@@ -32,7 +32,7 @@ const Sidebar = () => {
           </div>
           <div className={`pt-2 sm:pt-4 border-t border-black/20 ${poppins.className} font-light`}>
             <h1 className="text-lg">Theme</h1>
-            <div className="flex flex-col gap-1 sm:gap-2 mt-1 sm:mt-4 sm:text-base text-sm">
+            <div className="flex flex-col gap-1 sm:gap-1.5 mt-1 sm:mt-4 sm:text-base text-sm">
               <Button icon={<AiFillSetting size={20} />} name="buttonDeviceMode" label="buttonLightMode" type="button" className="hover:bg-slate-100 px-2 py-2.5 sm:py-3 rounded-lg flex gap-2 items-center" title="Device Theme" />
               <Button icon={<BsFillSunFill size={20} />} name="buttonLightMode" label="buttonLightMode" type="button" className="hover:bg-slate-100 px-2 py-2.5 sm:py-3 rounded-lg flex gap-2 items-center" title="Light Theme" />
               <Button className="hover:bg-slate-100 px-2 py-2.5 sm:py-3 rounded-lg flex gap-2 items-center" title="Dark Theme" name="buttonDarkToogle" label="buttonDarkkToogle" type="button" icon={<MdDarkMode size={20} />} />
