@@ -28,7 +28,11 @@ const SearchMobile = () => {
             className="bg-blue-50 border placeholder:text-black/50 border-blue-100 focus:bg-blue-100 focus:placeholder:text-black/60 rounded-full focus:border-blue-300 outline-none py-2 px-4 w-full grow mx-[5px]"
           />
           <Button type="submit" name="buttonCloseSearch" className="p-2 hover:text-primary rounded-full" label="buttonCloseSearch" icon={<AiOutlineSearch size={25} />} />
-          {searchTerm.length > 0 ? <Button type="submit" name="buttonCloseSearch" className="p-2 hover:opacity/70 absolute right-14 rounded-full" label="buttonCloseSearch" icon={<AiOutlineClose size={22} />} /> : ""}
+          {searchTerm.length > 0 ? (
+            <Button type="submit" onClick={() => setSearchTerm("")} name="buttonCloseSearch" className="p-2 hover:opacity/70 absolute right-14 rounded-full" label="buttonCloseSearch" icon={<AiOutlineClose size={22} />} />
+          ) : (
+            ""
+          )}
         </form>
       </nav>
     </>

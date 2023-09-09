@@ -16,7 +16,7 @@ const poppins = Poppins({
 const Categories = () => {
   const { category, setCategory } = useGlobalState();
   return (
-    <Box sx={{ mt: 2 }} className={`${poppins.className}`}>
+    <Box sx={{ mt: 1.5 }} className={`${poppins.className}`}>
       <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", py: 0.5 }} className="w-full">
         <p className="uppercase text-primary font-[400] cursor-default tracking-wide">Kategori</p>
         <Link href={"/product"}>
